@@ -1,0 +1,32 @@
+package ecomes.iteecomest.domain;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.UUID;
+@Getter
+@Setter
+@NoArgsConstructor
+@Entity
+@Table(name = "orders")
+public class Oder {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private UUID id;
+    @Column(nullable = false)
+    private String customerId;
+    @Column(nullable = false)
+    private String address;
+    @Column(nullable = false)
+    private Boolean status;
+    @Column(nullable = false)
+    private Float discount;
+    private String remark;
+    @Column(nullable = false)
+    private LocalDateTime createdAt;
+
+    @OneToMany(mappedBy = "order")
+    private List<OrderLine> orderLines;
+}
