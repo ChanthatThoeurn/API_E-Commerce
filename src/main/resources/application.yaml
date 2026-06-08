@@ -1,11 +1,12 @@
 spring:
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
         format_sql: true
+    open-in-view: false
   datasource:
     driver-class-name: org.postgresql.Driver
     username: ${USERNAME}
@@ -14,4 +15,4 @@ spring:
   application:
     name: ite-ecomest
 server:
-  port: 9191
+  port: 9696

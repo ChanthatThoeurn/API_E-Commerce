@@ -3,9 +3,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.util.List;
-
 @Entity
 @Table(name = "categories")
 @Getter
@@ -19,7 +17,7 @@ public class Category {
     private String name;
     private String description;
     private String icon;
-
+    Boolean isDeleted = false;
     @ManyToOne
     private Category parentCategory;
 
