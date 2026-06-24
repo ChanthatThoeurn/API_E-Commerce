@@ -1,6 +1,5 @@
-package ecomes.iteecomest.repository;
+package ecomes.iteecomest.feature.oder;
 
-import ecomes.iteecomest.domain.Oder;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface OderRepository extends JpaRepository<Oder, Integer> {

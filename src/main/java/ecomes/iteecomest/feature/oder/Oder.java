@@ -1,4 +1,5 @@
-package ecomes.iteecomest.domain;
+package ecomes.iteecomest.feature.oder;
+import ecomes.iteecomest.feature.orderLine.OrderLine;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

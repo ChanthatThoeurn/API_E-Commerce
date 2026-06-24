@@ -1,12 +1,7 @@
-package ecomes.iteecomest.service.impl;
-
-import ecomes.iteecomest.domain.Category;
-import ecomes.iteecomest.dto.CategoryResponse;
-import ecomes.iteecomest.dto.CreateCategoryRequest;
-import ecomes.iteecomest.dto.UpdateCategoryRequest;
-import ecomes.iteecomest.mapper.CategoryMapper;
-import ecomes.iteecomest.repository.CategoryRepository;
-import ecomes.iteecomest.service.CategoryService;
+package ecomes.iteecomest.feature.category;
+import ecomes.iteecomest.feature.category.dto.CategoryResponse;
+import ecomes.iteecomest.feature.category.dto.CreateCategoryRequest;
+import ecomes.iteecomest.feature.category.dto.UpdateCategoryRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;

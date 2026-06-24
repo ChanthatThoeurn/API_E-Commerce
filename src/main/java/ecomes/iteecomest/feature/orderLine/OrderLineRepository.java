@@ -1,6 +1,5 @@
-package ecomes.iteecomest.repository;
+package ecomes.iteecomest.feature.orderLine;
 
-import ecomes.iteecomest.domain.OrderLine;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface OrderLineRepository extends JpaRepository<OrderLine, Integer> {

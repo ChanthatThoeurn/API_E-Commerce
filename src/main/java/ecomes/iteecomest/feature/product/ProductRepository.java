@@ -1,7 +1,9 @@
-package ecomes.iteecomest.repository;
-
-import ecomes.iteecomest.domain.Product;
+package ecomes.iteecomest.feature.product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProductRepository extends JpaRepository<Product, Integer> {
+    Boolean existsByName(String name);
+
+
+
 }

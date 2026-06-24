@@ -1,4 +1,4 @@
-package ecomes.iteecomest.dto;
+package ecomes.iteecomest.feature.category.dto;
 
 import lombok.Builder;
 import java.util.List;

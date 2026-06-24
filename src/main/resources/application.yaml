@@ -1,3 +1,8 @@
+file:
+  client-path: /file
+  storage-location: /home/chanthat/file-upload/
+  base-uri: http://localhost:${server.port}${file.client-path}
+
 spring:
   jpa:
     hibernate:
@@ -16,3 +21,4 @@ spring:
     name: ite-ecomest
 server:
   port: 9696
+

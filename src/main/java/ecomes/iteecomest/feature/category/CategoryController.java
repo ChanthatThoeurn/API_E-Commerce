@@ -1,8 +1,7 @@
-package ecomes.iteecomest.controller;
-import ecomes.iteecomest.dto.CategoryResponse;
-import ecomes.iteecomest.dto.CreateCategoryRequest;
-import ecomes.iteecomest.dto.UpdateCategoryRequest;
-import ecomes.iteecomest.service.CategoryService;
+package ecomes.iteecomest.feature.category;
+import ecomes.iteecomest.feature.category.dto.CategoryResponse;
+import ecomes.iteecomest.feature.category.dto.CreateCategoryRequest;
+import ecomes.iteecomest.feature.category.dto.UpdateCategoryRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

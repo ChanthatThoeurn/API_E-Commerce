@@ -1,11 +1,9 @@
-package ecomes.iteecomest.service;
-
-import ecomes.iteecomest.dto.CategoryResponse;
-import ecomes.iteecomest.dto.CreateCategoryRequest;
-import ecomes.iteecomest.dto.UpdateCategoryRequest;
+package ecomes.iteecomest.feature.category;
+import ecomes.iteecomest.feature.category.dto.CategoryResponse;
+import ecomes.iteecomest.feature.category.dto.CreateCategoryRequest;
+import ecomes.iteecomest.feature.category.dto.UpdateCategoryRequest;
 import org.springframework.data.domain.Page;
 import java.util.List;
-
 public interface CategoryService {
     CategoryResponse createCategory(CreateCategoryRequest request);
     Page<CategoryResponse> getAllCategories(int pageNumber, int pageSize);

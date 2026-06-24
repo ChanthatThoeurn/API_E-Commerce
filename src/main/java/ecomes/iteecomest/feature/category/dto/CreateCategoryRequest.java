@@ -1,6 +1,5 @@
-package ecomes.iteecomest.dto;
+package ecomes.iteecomest.feature.category.dto;
 
-import ecomes.iteecomest.domain.Category;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

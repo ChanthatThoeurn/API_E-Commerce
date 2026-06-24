@@ -1,7 +1,6 @@
-package ecomes.iteecomest.mapper;
-import ecomes.iteecomest.domain.Category;
-import ecomes.iteecomest.dto.CategoryResponse;
-import ecomes.iteecomest.dto.CreateCategoryRequest;
+package ecomes.iteecomest.feature.category;
+import ecomes.iteecomest.feature.category.dto.CategoryResponse;
+import ecomes.iteecomest.feature.category.dto.CreateCategoryRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

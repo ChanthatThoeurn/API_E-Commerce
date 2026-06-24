@@ -1,4 +1,5 @@
-package ecomes.iteecomest.domain;
+package ecomes.iteecomest.feature.category;
+import ecomes.iteecomest.feature.product.Product;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,7 +21,6 @@ public class Category {
     Boolean isDeleted = false;
     @ManyToOne
     private Category parentCategory;
-
     @OneToMany(mappedBy = "category")
     private List<Product> products;
 }
