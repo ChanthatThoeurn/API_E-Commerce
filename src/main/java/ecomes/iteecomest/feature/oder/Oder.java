@@ -1,5 +1,4 @@
 package ecomes.iteecomest.feature.oder;
-import ecomes.iteecomest.feature.orderLine.OrderLine;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,6 +27,8 @@ public class Oder {
     @Column(nullable = false)
     private LocalDateTime createdAt;
 
-    @OneToMany(mappedBy = "order")
+    private boolean isDeleted = false;
+
+    @OneToMany(mappedBy = "order" ,  cascade = CascadeType.PERSIST)
     private List<OrderLine> orderLines;
 }

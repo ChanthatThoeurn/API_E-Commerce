@@ -1,6 +1,7 @@
 package ecomes.iteecomest.feature.file;
 import ecomes.iteecomest.feature.file.dto.FileUploadResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +28,7 @@ public class FileUploadController {
     )
     public List<FileUploadResponse> uploadMultiple(
             @RequestParam("files") MultipartFile[] files) {
-        return fileUploadService.uploadMultiFile(files);
+        return fileUploadService.uploadMultipleNew(List.of(files));
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
@@ -36,4 +37,19 @@ public class FileUploadController {
             @PathVariable String name) {
         fileUploadService.deleteFile(name);
     }
+
+    @GetMapping("/{name}")
+    public FileUploadResponse findByName(@PathVariable String name) {
+        return fileUploadService.findByName(name);
+    }
+
+    @GetMapping
+    public Page<FileUploadResponse> findAll(
+            @RequestParam(required = false, defaultValue = "0") int pageNumber,
+            @RequestParam(required = false, defaultValue = "25") int pageSize
+    ) {
+        return fileUploadService.findAll(pageNumber, pageSize);
+    }
+
+
 }
