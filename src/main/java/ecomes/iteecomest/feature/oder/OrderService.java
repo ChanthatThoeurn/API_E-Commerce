@@ -10,6 +10,12 @@ import java.util.UUID;
 
 public interface OrderService {
 
+    /**
+     * Writing by Chanthat
+     * No AI
+     * @param request
+     * @return
+     */
     OrderResponse createOrder( CreateOrderRequest request);
     Page<OrderResponse> findAllOrders(int pageNumber, int pageSize);
     OrderResponse findOrderById(UUID id);
